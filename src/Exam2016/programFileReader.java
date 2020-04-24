@@ -89,7 +89,9 @@ public class programFileReader {
 	// Main
 	public static void main(String[] args) {
 
-		String file = "C:\\Users\\p_ber\\Desktop\\in.txt";
+//		Note, change the directory path in the String to yours for the program to work.
+		
+		String file = "C:\\Users\\[your_user]\\Workspace\\ProgrammingExams\\src\\Exam2016\\in.txt";
 		ArrayList<Double> numbers = new ArrayList<>();
 		numbers = fillList(file);
 
