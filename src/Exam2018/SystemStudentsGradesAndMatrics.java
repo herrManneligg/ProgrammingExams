@@ -14,11 +14,9 @@ public class SystemStudentsGradesAndMatrics {
 		String path = "C:\\Users\\p_ber\\Workspace\\ProgrammingExams\\src\\Exam2018\\grades.txt";
 		ArrayList<String> document = loadFile(path);
 
-		
 //		Two arrays that will store the matrices and grades of the students.
 		int[] matrics = new int[document.size()];
 		String[] grades = new String[document.size()];
-
 		
 //		Here we pass the information from the ArrayList with the raw information
 //		of the students to the two previous arrays.
@@ -40,13 +38,16 @@ public class SystemStudentsGradesAndMatrics {
 			students[j] = new StudentGrade(matrics[j], grades[j]);
 		}
 		
+		
+		// Arrays.sort() does not sort the array for some reason. Need to work on it...
+		Arrays.sort(students);
 		System.out.println("Sorted");
 		for (int j = 0; j < students.length; j++) {
 			System.out.println(students[j]);
 		}
 		
+		
 	}
-	
 	
 //	The following method retrieves the grades from the students.
 	public static ArrayList<String> loadFile(String path) {
@@ -77,17 +78,18 @@ public class SystemStudentsGradesAndMatrics {
 //	The following method compares the grades of the students.
 	public static int compareGrades(String gradeOne, String gradeTwo) {
 
+		// Comparing first if the gradeOne is bigger than gradeTwo (checks the letter and the numbers)
 		if ((gradeOne.charAt(0) > gradeTwo.charAt(0)) || (gradeOne.charAt(0) == gradeTwo.charAt(0)) && (gradeOne.charAt(1) > gradeTwo.charAt(1))) {
 
 			return 1;
 
-		} else if (gradeOne.charAt(1) == gradeTwo.charAt(1)) {
+		// Since gradeOne is not bigger than gradeTwo, we check if both are the same
+		} else if ((gradeOne.charAt(0) == gradeTwo.charAt(0)) && (gradeOne.charAt(1) == gradeTwo.charAt(1))) {
 
 			return 0;
 		}
-
+		// The only remaining possibility is that gradeTwo is bigger than gradeOne
 		return -1;
-
 	}
 
 //	Compares and fins the greatest grade among the students.	

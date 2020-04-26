@@ -48,7 +48,6 @@ public class StudentGrade implements Comparable {
 		}
 
 		return -1;
-
 	}
 	
 	public String toString() {

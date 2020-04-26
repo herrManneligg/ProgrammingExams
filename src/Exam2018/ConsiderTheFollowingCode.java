@@ -4,16 +4,16 @@ import java.io.Console;
 
 public class ConsiderTheFollowingCode {
 
-	Console bigConsole = new Console(100, 100); // This is the big console
-	Console smallConsole = new Console(10, 10); // This is the small console
+//	Console bigConsole = new Console(100, 100); // This is the big console
+//	Console smallConsole = new Console(10, 10); // This is the small console
 
-	bigConsole.println(“Boltzmann”);
-	smallConsole.println(“Einstein”);
-
-	bigConsole = smallConsole;
-	
-	bigConsole.println(“Maxwell”);
-	String name = “Feynman”;
+//	bigConsole.println(“Boltzmann”);
+//	smallConsole.println(“Einstein”);
+//
+//	bigConsole = smallConsole;
+//	
+//	bigConsole.println(“Maxwell”);
+//	String name = “Feynman”;
 	
 	
 //	QUESTION.
