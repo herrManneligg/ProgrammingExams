@@ -103,7 +103,8 @@ public class DrawingFrame extends JFrame implements ActionListener, MouseListene
 	public void mouseReleased(MouseEvent e) {
 		
 		panel.draw(x, y, e.getX(), e.getY());
-		System.out.println("Realised at: " + x + " " + y);
+		System.out.println("Pressed: " + x + " " + y);
+		System.out.println("Realised: " + e.getX() + " " + e.getY());
 	}
 
 	
