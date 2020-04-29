@@ -73,21 +73,6 @@ public class DrawingFrame extends JFrame implements ActionListener, MouseListene
 		this.add(panel2, BorderLayout.EAST);
 	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-	}
-	
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-	}
-	
 //	These two Mouse Listeners check the coordinates pressed by the user
 //	and once the mouse has been released, the coordinates are sent to 
 //	canvas in order to draw the line.
@@ -107,8 +92,6 @@ public class DrawingFrame extends JFrame implements ActionListener, MouseListene
 		System.out.println("Realised: " + e.getX() + " " + e.getY());
 	}
 
-	
-	
 //	The ActionListener is within this class. Nonetheless, it could be in its own class
 //	as a Controller following the MVC pattern. However, the exercise does not really
 //	specify that, and since it was easier to leave this in this class I did not overhead.
@@ -163,6 +146,21 @@ public class DrawingFrame extends JFrame implements ActionListener, MouseListene
 				red.setSelected(false);
 			}
 		}
+	}
+	
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+	
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+	
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
 	}
 	
 //	Just the main method
